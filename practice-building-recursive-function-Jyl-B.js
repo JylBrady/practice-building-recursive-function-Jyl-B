@@ -21,12 +21,16 @@ Example Inputs and Outputs:
     practice-building-recursive-function-Jyl-B.js
 */
 
-let string
+
 function reverseString(string) {
-    if  (typeof string === "string");
+    if (typeof string === "string") {
         string = string.split("");
+    }
     if (string.length === 0)  {  //Base Case
         return (string);
-    } return string.pop();  //Recursive Case
+    } return string.pop() + reverseString(string);  //Recursive Case
 }
-console.log (reverseString("hello"));
+console.log (reverseString("hello")); // Outputs: "olleh" 
+console.log (reverseString("recursion")); // Outputs: "noisrucer" 
+console.log (reverseString("a")); // Outputs: "a" 
+console.log (reverseString("")); // Outputs: "" 
